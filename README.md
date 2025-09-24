@@ -46,22 +46,22 @@ src/br/ulbra/
 ## 🗄️ Banco de dados
 Crie o schema e tabelas:
 ```sql
-CREATE DATABASE IF NOT EXISTS cruddb1;
-USE cruddb1;
+CREATE DATABASE IF NOT EXISTS bdaulabanco;
+USE bdaulabanco;
 
-CREATE TABLE usuario (
+CREATE TABLE tbusuario (
   id INT AUTO_INCREMENT PRIMARY KEY,
   login VARCHAR(100) NOT NULL UNIQUE,
-  senha VARCHAR(100) NOT NULL,
+  senha VARCHAR(225) NOT NULL,
   nome VARCHAR(150),
   ativo TINYINT(1) DEFAULT 1
 );
 
-CREATE TABLE cliente (
+CREATE TABLE tbcliente (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(150) NOT NULL,
-  email VARCHAR(150),
-  telefone VARCHAR(30)
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(200),
+  telefone VARCHAR(15)
 );
 ```
 
@@ -100,8 +100,8 @@ if (dao.countUsuarios() == 0) {
 ## ▶️ Execução
 1. Rode o projeto (classe `LoginView` é a principal).  
 2. Faça login:
-   - Usuário: `adm`
-   - Senha: `admin123`  
+   - Usuário: `prade`
+   - Senha: `bandasz`  
 3. Após autenticação, o sistema abre o **MenuPrincipalView**.
 
 ---
