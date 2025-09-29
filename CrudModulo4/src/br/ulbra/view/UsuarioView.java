@@ -130,6 +130,8 @@ public class UsuarioView extends javax.swing.JFrame {
         ChkAtivoUsu.setForeground(new java.awt.Color(51, 51, 51));
         ChkAtivoUsu.setText("Ativo");
 
+        TblUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        TblUsuario.setForeground(new java.awt.Color(0, 0, 0));
         TblUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

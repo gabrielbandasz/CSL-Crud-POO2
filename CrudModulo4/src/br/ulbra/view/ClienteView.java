@@ -175,8 +175,8 @@ public class ClienteView extends javax.swing.JFrame {
 
         jScrollPane2.setForeground(new java.awt.Color(0, 0, 0));
 
-        TblCliente.setBackground(new java.awt.Color(102, 102, 102));
-        TblCliente.setForeground(new java.awt.Color(255, 255, 255));
+        TblCliente.setBackground(new java.awt.Color(255, 255, 255));
+        TblCliente.setForeground(new java.awt.Color(0, 0, 0));
         TblCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
