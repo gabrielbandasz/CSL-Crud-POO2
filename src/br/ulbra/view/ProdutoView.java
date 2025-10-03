@@ -31,6 +31,7 @@ public class ProdutoView extends javax.swing.JFrame {
         initComponents();
         listarProdutos();
         carregarFornecedores();
+        limparCamposProduto();
         if (produtoEmEdicao != null && produtoEmEdicao.getFornecedor() != null) {
             selecionarFornecedorNoCombo(produtoEmEdicao.getFornecedor());
         }
@@ -132,6 +133,7 @@ public class ProdutoView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -240,35 +242,38 @@ public class ProdutoView extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(244, 244, 244)
-                .addComponent(jLabel1)
+                .addGap(69, 69, 69)
+                .addComponent(BtnSalvarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnEditarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnExcluirPro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnListarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel2)
-                    .addComponent(TxtIdPro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(TxtNomePro)
-                    .addComponent(jLabel4)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(BtnSalvarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnEditarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnExcluirPro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BtnListarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CbFornecedor, 0, 460, Short.MAX_VALUE)
-                    .addComponent(TxtPreco))
-                .addContainerGap(58, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(59, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel2)
+                            .addComponent(TxtIdPro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(TxtNomePro)
+                            .addComponent(jLabel4)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CbFornecedor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TxtPreco, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(236, 236, 236))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -290,11 +295,11 @@ public class ProdutoView extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnSalvarPro)
-                    .addComponent(BtnEditarPro)
-                    .addComponent(BtnExcluirPro)
-                    .addComponent(BtnListarPro))
-                .addContainerGap(68, Short.MAX_VALUE))
+                    .addComponent(BtnExcluirPro, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnListarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnSalvarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnEditarPro, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -363,14 +368,124 @@ listarProdutos();
      }//GEN-LAST:event_BtnSalvarProActionPerformed
 
     private void BtnEditarProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditarProActionPerformed
- int linha = tbProduto.getSelectedRow();  
+ try {
+    // Se ainda não estivermos em modo edição, iniciar edição
+    if (produtoEmEdicao == null) {
+        int linha = tbProduto.getSelectedRow();
+        if (linha < 0) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Selecione um produto para editar");
+            return;
+        }
+
+        Integer id = (Integer) tbProduto.getValueAt(linha, 0); // supondo que a coluna 0 é o ID
+
+        ProdutoDAO dao = new ProdutoDAO();
+        Produto p = dao.buscarPorId(id);
+        if (p == null) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Produto não encontrado");
+            return;
+        }
+
+        // Preenche os campos de edição com os valores atuais
+        TxtIdPro.setText(String.valueOf(p.getId())); // se você tiver um TxtId
+        TxtNomePro.setText(p.getNome());
+        TxtPreco.setText(String.valueOf(p.getPreco()));
+
+        Fornecedor f = p.getFornecedor();
+        if (f != null) {
+            int idx = -1;
+            for (int i = 0; i < CbFornecedor.getItemCount(); i++) {
+                Object item = CbFornecedor.getItemAt(i);
+                if (item instanceof Fornecedor) {
+                    Fornecedor ff = (Fornecedor) item;
+                    if (ff.getIdFor() == f.getIdFor()) {
+                        idx = i;
+                        break;
+                    }
+                }
+            }
+            if (idx >= 0) CbFornecedor.setSelectedIndex(idx);
+        } else {
+            CbFornecedor.setSelectedIndex(-1);
+        }
+
+        // Marca o produto atual como em edição
+        produtoEmEdicao = p;
+
+        // Habilita campos para edição (se necessário) e atualiza UI
+        TxtNomePro.setEnabled(true);
+        TxtPreco.setEnabled(true);
+        CbFornecedor.setEnabled(true);
+
+        // Opcional: mudar o texto do botão para "Salvar" ou manter toggle
+        // btnEditar.setText("Salvar alterações");
+        // Se tiver um botão de salvar específico, habilite-o
+        // btnSalvarEdicao.setEnabled(true);
+
+        // Foco para o primeiro campo
+        TxtNomePro.requestFocusInWindow();
+
+        return; // sai do método aqui, agora o usuário edita e, na próxima ação, salva
+    }
+
+    // Se já estivermos em modo edição, salvamos as alterações (fluxo toggle)
+    // 6) Coleta valores dos campos
+    String novoNome = TxtNomePro.getText().trim();
+    String precoStr = TxtPreco.getText().trim();
+    double novoPreco;
+    try {
+        novoPreco = Double.parseDouble(precoStr);
+    } catch (NumberFormatException nfe) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Preço inválido");
+        return;
+    }
+
+    Fornecedor novoFornecedor = null;
+    Object sel = CbFornecedor.getSelectedItem();
+    if (sel instanceof Fornecedor) {
+        novoFornecedor = (Fornecedor) sel;
+    }
+
+    // Atualiza o objeto em memória
+    produtoEmEdicao.setNome(novoNome);
+    produtoEmEdicao.setPreco(novoPreco);
+    produtoEmEdicao.setFornecedor(novoFornecedor);
+
+    // Persistência
+    ProdutoDAO dao = new ProdutoDAO();
+    dao.atualizar(produtoEmEdicao);
+
+    javax.swing.JOptionPane.showMessageDialog(this, "Produto atualizado com sucesso");
+
+    // Atualiza a tabela refletindo a edição
+    listarProdutos();
+
+    // Limpa o estado e esquemas de edição
+    produtoEmEdicao = null;
+    limparCamposProduto(); // ou resetarCamposEdicao(), conforme seu código
+    // Opcional: resetar a UI
+    // TxtNomePro.setText("");
+    // TxtPreco.setText("");
+    // CbFornecedor.setSelectedIndex(-1);
+
+} catch (NumberFormatException nfe) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Selecione um produto para editar");
+} catch (Exception ex) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Erro ao atualizar: " + ex.getMessage());
+
+        }      }//GEN-LAST:event_BtnEditarProActionPerformed
+
+    private void BtnExcluirProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExcluirProActionPerformed
+// Se ainda não estivermos em modo edição, iniciamos a edição  
+    if (produtoEmEdicao == null) {  
+        int linha = tbProduto.getSelectedRow();  
         if (linha < 0) {  
             JOptionPane.showMessageDialog(this, "Selecione um produto para editar.");  
             return;  
         }  
 
-        // Supondo que a primeira coluna é o ID  
-        Integer id = (Integer) tbProduto.getValueAt(linha, 0);  
+        Integer id = (Integer) tbProduto.getValueAt(linha, 0); // coluna 0 é o ID  
+
         try {  
             ProdutoDAO dao = new ProdutoDAO();  
             Produto p = dao.buscarPorId(id);  
@@ -379,60 +494,94 @@ listarProdutos();
                 return;  
             }  
 
-            // Preenche os campos de edição  
+            // Preenche os campos de edição com os valores atuais  
             TxtNomePro.setText(p.getNome());  
             TxtPreco.setText(String.valueOf(p.getPreco()));  
-            // Assume que cbFornecedor já está preenchido com Fornecedor e você pode selecionar o correspondente  
-            // Você pode precisar percorrer a lista do cbFornecedor para encontrar o mesmo id  
+
             Fornecedor f = p.getFornecedor();  
             if (f != null) {  
-                // Tenta selecionar o fornecedor no combobox  
-                int index = -1;  
+                int idx = -1;  
                 for (int i = 0; i < CbFornecedor.getItemCount(); i++) {  
                     Object item = CbFornecedor.getItemAt(i);  
                     if (item instanceof Fornecedor) {  
                         Fornecedor ff = (Fornecedor) item;  
                         if (ff.getIdFor() == f.getIdFor()) {  
-                            index = i;  
+                            idx = i;  
                             break;  
                         }  
                     }  
                 }  
-                if (index >= 0) CbFornecedor.setSelectedIndex(index);  
+                if (idx >= 0) CbFornecedor.setSelectedIndex(idx);  
             } else {  
                 CbFornecedor.setSelectedIndex(-1);  
             }  
 
-            // Opcional: manter o ID do produto em um campo oculto ou variável para o UPDATE  
-            // Por exemplo, armazenar em um atributo da view:  
-            this.produtoEmEdicao = p; // declare private Produto produtoEmEdicao;  
+            // Marca como produto em edição  
+            produtoEmEdicao = p;  
+
+            // Habilita os campos de edição  
+            TxtNomePro.setEnabled(true);  
+            TxtPreco.setEnabled(true);  
+            CbFornecedor.setEnabled(true);  
+
+            // Você pode mudar o texto do botão para "Salvar edição" se tiver um único botão  
+            // Ex.: btnEditarProduto.setText("Salvar edição");  
+            // Foco no primeiro campo para facilitar a edição  
+            TxtNomePro.requestFocusInWindow();  
+
         } catch (SQLException ex) {  
             JOptionPane.showMessageDialog(this, "Erro ao carregar produto: " + ex.getMessage(),  
                     "Erro", JOptionPane.ERROR_MESSAGE);  
-        }      }//GEN-LAST:event_BtnEditarProActionPerformed
+        }  
+        return; // encerra aqui para entrar no modo edição  
+    }  
 
-    private void BtnExcluirProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExcluirProActionPerformed
- int linha = tbProduto.getSelectedRow();
-    if (linha < 0) {
-        JOptionPane.showMessageDialog(this, "Selecione um produto para excluir.");
-        return;
-    }
+    // Caso já esteja em modo edição, salvamos as alterações  
+    // 6) Coleta valores dos campos  
+    String novoNome = TxtNomePro.getText().trim();  
+    String precoStr = TxtPreco.getText().trim();  
+    double novoPreco = 0.0;  
+    try {  
+        novoPreco = Double.parseDouble(precoStr);  
+    } catch (NumberFormatException nfe) {  
+        JOptionPane.showMessageDialog(this, "Preço inválido.");  
+        return;  
+    }  
 
-    int confirm = JOptionPane.showConfirmDialog(this,
-            "Deseja realmente excluir o produto selecionado?",
-            "Confirmar",
-            JOptionPane.YES_NO_OPTION);
-    if (confirm != JOptionPane.YES_OPTION) return;
+    Fornecedor novoFornecedor = null;  
+    Object sel = CbFornecedor.getSelectedItem();  
+    if (sel instanceof Fornecedor) {  
+        novoFornecedor = (Fornecedor) sel;  
+    }  
 
-    Integer id = (Integer) tbProduto.getValueAt(linha, 0);
-    try {
-        ProdutoDAO dao = new ProdutoDAO();
-        dao.remover(id);
-        JOptionPane.showMessageDialog(this, "Produto excluído com sucesso.");
-        listarProdutos();
-    } catch (Exception ex) {
-        JOptionPane.showMessageDialog(this, "Erro ao excluir produto: " + ex.getMessage(),
-                                      "Erro", JOptionPane.ERROR_MESSAGE);
+    // Atualiza o objeto em memória  
+    produtoEmEdicao.setNome(novoNome);  
+    produtoEmEdicao.setPreco(novoPreco);  
+    produtoEmEdicao.setFornecedor(novoFornecedor);  
+
+    // Persistência  
+    try {  
+        ProdutoDAO dao = new ProdutoDAO();  
+        dao.atualizar(produtoEmEdicao); // ajuste para o seu método (update/editar)  
+        JOptionPane.showMessageDialog(this, "Produto atualizado com sucesso.");  
+
+        // Atualiza a tabela refletindo a edição  
+        carregarFornecedores(); // recarrega a lista e preenche tbProduto  
+        produtoEmEdicao = null;
+
+        // Opcional: resetar campos de edição e voltar ao modo leitura
+        TxtNomePro.setText("");
+        TxtPreco.setText("");
+        CbFornecedor.setSelectedIndex(-1);
+
+        // Se tiver, redefina o estado do botão (ex.: voltar para "Editar")
+        // btnEditarProduto.setText("Editar");
+        // Desabilite o salvar, se houver
+        // btnSalvarEdicao.setEnabled(false);
+
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Erro ao atualizar produto: " + ex.getMessage(),
+                "Erro", JOptionPane.ERROR_MESSAGE);
     }    }//GEN-LAST:event_BtnExcluirProActionPerformed
 
     private void CbFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CbFornecedorActionPerformed

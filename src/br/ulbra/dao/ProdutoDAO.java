@@ -41,7 +41,7 @@ public class ProdutoDAO extends AbstractDAO {
                     Fornecedor f = new Fornecedor(
                         rs.getInt("f_idfor"),
                         rs.getString("f_nomerazao"),
-                        rs.getString("nomefansia"),
+                        rs.getString("nomefantasia"),
                         rs.getString("email"),
                         rs.getString("telefone")
                     );
